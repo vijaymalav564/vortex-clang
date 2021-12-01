@@ -115,6 +115,16 @@ set_target_properties(clangAnalysis PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS clangAnalysis )
 list(APPEND _IMPORT_CHECK_FILES_FOR_clangAnalysis "${_IMPORT_PREFIX}/lib/libclangAnalysis.a" )
 
+# Import target "clangAnalysisFlowSensitive" for configuration "Release"
+set_property(TARGET clangAnalysisFlowSensitive APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangAnalysisFlowSensitive PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangAnalysisFlowSensitive.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS clangAnalysisFlowSensitive )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clangAnalysisFlowSensitive "${_IMPORT_PREFIX}/lib/libclangAnalysisFlowSensitive.a" )
+
 # Import target "clangEdit" for configuration "Release"
 set_property(TARGET clangEdit APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clangEdit PROPERTIES
