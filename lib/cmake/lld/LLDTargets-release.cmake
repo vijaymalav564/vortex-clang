@@ -15,56 +15,6 @@ set_target_properties(lldCommon PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS lldCommon )
 list(APPEND _IMPORT_CHECK_FILES_FOR_lldCommon "${_IMPORT_PREFIX}/lib/liblldCommon.a" )
 
-# Import target "lldCore" for configuration "Release"
-set_property(TARGET lldCore APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(lldCore PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/liblldCore.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS lldCore )
-list(APPEND _IMPORT_CHECK_FILES_FOR_lldCore "${_IMPORT_PREFIX}/lib/liblldCore.a" )
-
-# Import target "lldDriver" for configuration "Release"
-set_property(TARGET lldDriver APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(lldDriver PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/liblldDriver.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS lldDriver )
-list(APPEND _IMPORT_CHECK_FILES_FOR_lldDriver "${_IMPORT_PREFIX}/lib/liblldDriver.a" )
-
-# Import target "lldMachOOld" for configuration "Release"
-set_property(TARGET lldMachOOld APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(lldMachOOld PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/liblldMachOOld.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS lldMachOOld )
-list(APPEND _IMPORT_CHECK_FILES_FOR_lldMachOOld "${_IMPORT_PREFIX}/lib/liblldMachOOld.a" )
-
-# Import target "lldYAML" for configuration "Release"
-set_property(TARGET lldYAML APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(lldYAML PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/liblldYAML.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS lldYAML )
-list(APPEND _IMPORT_CHECK_FILES_FOR_lldYAML "${_IMPORT_PREFIX}/lib/liblldYAML.a" )
-
-# Import target "lldReaderWriter" for configuration "Release"
-set_property(TARGET lldReaderWriter APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(lldReaderWriter PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/liblldReaderWriter.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS lldReaderWriter )
-list(APPEND _IMPORT_CHECK_FILES_FOR_lldReaderWriter "${_IMPORT_PREFIX}/lib/liblldReaderWriter.a" )
-
 # Import target "lld" for configuration "Release"
 set_property(TARGET lld APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(lld PROPERTIES

@@ -444,6 +444,16 @@ set_target_properties(LLVMRemarks PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS LLVMRemarks )
 list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMRemarks "${_IMPORT_PREFIX}/lib/libLLVMRemarks.a" )
 
+# Import target "LLVMDebuginfod" for configuration "Release"
+set_property(TARGET LLVMDebuginfod APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(LLVMDebuginfod PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libLLVMDebuginfod.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS LLVMDebuginfod )
+list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMDebuginfod "${_IMPORT_PREFIX}/lib/libLLVMDebuginfod.a" )
+
 # Import target "LLVMDebugInfoDWARF" for configuration "Release"
 set_property(TARGET LLVMDebugInfoDWARF APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(LLVMDebugInfoDWARF PROPERTIES
