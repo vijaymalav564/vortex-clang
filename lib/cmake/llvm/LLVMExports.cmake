@@ -571,7 +571,7 @@ set_target_properties(LLVMLineEditor PROPERTIES
 add_library(LLVMProfileData STATIC IMPORTED)
 
 set_target_properties(LLVMProfileData PROPERTIES
-  INTERFACE_LINK_LIBRARIES "LLVMCore;LLVMSupport;LLVMDemangle"
+  INTERFACE_LINK_LIBRARIES "LLVMCore;LLVMSupport;LLVMDemangle;LLVMObject;LLVMDebugInfoDWARF"
 )
 
 # Create imported target LLVMCoverage
