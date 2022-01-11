@@ -1,6 +1,5 @@
 # This file allows users to call find_package(LLD) and pick up our targets.
 
-
 # Compute the installation prefix from this LLVMConfig.cmake file location.
 get_filename_component(LLD_INSTALL_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
 get_filename_component(LLD_INSTALL_PREFIX "${LLD_INSTALL_PREFIX}" PATH)
