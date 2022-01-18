@@ -1,15 +1,21 @@
 # This file allows users to call find_package(Polly) and pick up our targets.
 
+# Compute the installation prefix from this LLVMConfig.cmake file location.
+get_filename_component(POLLY_INSTALL_PREFIX "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(POLLY_INSTALL_PREFIX "${POLLY_INSTALL_PREFIX}" PATH)
+get_filename_component(POLLY_INSTALL_PREFIX "${POLLY_INSTALL_PREFIX}" PATH)
+get_filename_component(POLLY_INSTALL_PREFIX "${POLLY_INSTALL_PREFIX}" PATH)
+
 find_package(LLVM REQUIRED CONFIG
-             HINTS "/drone/src/llvmTC/build/llvm/stage2/lib/cmake/llvm")
+             HINTS "${POLLY_INSTALL_PREFIX}/lib/cmake/llvm")
 
 set(Polly_CMAKE_DIR ${CMAKE_CURRENT_LIST_DIR})
 set(Polly_BUNDLED_ISL ON)
 set(Polly_ENABLE_GPGPU_CODEGEN OFF)
 
 set(Polly_DEFINITIONS ${LLVM_DEFINITIONS})
-set(Polly_INCLUDE_DIRS /drone/src/llvmTC/install/include;/drone/src/llvmTC/install/include/polly ${LLVM_INCLUDE_DIRS})
-set(Polly_LIBRARY_DIRS /drone/src/llvmTC/install/lib)
+set(Polly_INCLUDE_DIRS ${POLLY_INSTALL_PREFIX}/include;${POLLY_INSTALL_PREFIX}/include/polly ${LLVM_INCLUDE_DIRS})
+set(Polly_LIBRARY_DIRS ${POLLY_INSTALL_PREFIX}/lib)
 set(Polly_EXPORTED_TARGETS Polly;PollyISL;LLVMPolly)
 set(Polly_LIBRARIES ${LLVM_LIBRARIES} ${Polly_EXPORTED_TARGETS})
 
