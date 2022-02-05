@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-bigaarch64", "elf32-bigaarch64",
 	      "elf32-littleaarch64")
 OUTPUT_ARCH(aarch64:ilp32)
 ENTRY(_start)
-SEARCH_DIR("/drone/src/llvmTC/install/aarch64-linux-gnu/libilp32"); SEARCH_DIR("/drone/src/llvmTC/install/aarch64-linux-gnu/lib");
+SEARCH_DIR("/home/vijaymalav6970/llvmTC/install/aarch64-linux-gnu/libilp32"); SEARCH_DIR("/home/vijaymalav6970/llvmTC/install/aarch64-linux-gnu/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
